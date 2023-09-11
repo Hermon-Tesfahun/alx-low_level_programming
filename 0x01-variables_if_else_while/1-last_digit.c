@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - checks whether the last digit of a number is greater thatn 5, equal to zero or less than 6
+ * main - checks whether the last digit of n is >5,==0 or <6
  *
  * Return: 0 is the program is successful
  */
