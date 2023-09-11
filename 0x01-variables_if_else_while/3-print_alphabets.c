@@ -7,8 +7,9 @@
  */
 int main(void)
 {
-char alp='a';
+	char alp='a';
 	int i;
+	int j;
 
 	for (i = 0; i < 26; i++)
 	{
