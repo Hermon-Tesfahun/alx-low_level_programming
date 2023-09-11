@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char alp='a';
+	char alp = 'a';
 	int i;
 	int j;
 
@@ -15,7 +15,7 @@ int main(void)
 	{
 		putchar(alp++);
 	}
-	alp='A';
+	alp = 'A';
 	for (j = 0; j < 26; j++)
 	{
 		putchar(alp++);
