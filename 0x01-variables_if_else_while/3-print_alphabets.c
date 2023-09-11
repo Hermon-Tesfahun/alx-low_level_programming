@@ -17,8 +17,8 @@ int main(void)
 	}
 	alp='A';
 	for (j = 0; j < 26; j++)
-        {
-       		putchar(alp++);
+	{
+		putchar(alp++);
 	}
 	putchar('\n');
 	return (0);
