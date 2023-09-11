@@ -12,15 +12,15 @@ char alp='a';
 
 	for (i = 0; i < 52; i++)
 	{
-		if(i > 26)
-		{
-			putchar(alp++);
-		}
-		else
-		{
-			alp= 'A';
-			putchar(alp++);
-		}
+	if(i < 26)
+	{
+		putchar(alp++);
+	}
+	else
+	{
+		alp= 'A';
+		putchar(alp++);
+	}
 	}
 	putchar('\n');
 	return (0);
