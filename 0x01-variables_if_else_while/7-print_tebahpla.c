@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-        char alp = 'z';
-        int i;
+	char alp = 'z';
+	int i;
 
-        for (i = 26; i > 0; i--)
-        {
-                putchar(alp--);
-        }
-        putchar('\n');
-        return (0);
+	for (i = 26; i > 0; i--)
+	{
+		putchar(alp--);
+	}
+	putchar('\n');
+	return (0);
 }
