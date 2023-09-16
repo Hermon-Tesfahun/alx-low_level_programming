@@ -1,12 +1,20 @@
 #include "main.h"
+
 /**
- * mul - multiply 2 int
- * @a: first int
- * @b: second int
- * Return: addition of the multiplicattion
+ * _isupper - checks if letter is uppercase
+ * @c: letter to check
+ *
+ * Return: 0 or 1
  */
 
-int mul(int a, int b)
+int _isupper(int c)
 {
-	return (a * b);
+        if (c >= 'A' && c <= 'Z')
+        {
+                return (1);
+        }
+        else
+        {
+                return (0);
+        }
 }
