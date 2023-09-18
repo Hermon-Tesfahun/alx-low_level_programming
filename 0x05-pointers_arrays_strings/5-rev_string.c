@@ -20,7 +20,7 @@ void rev_string(char *s)
 		count--;
 		reverse = s[i];
 		s[i] = s[count];
-		s[counter] = reverse;
+		s[count] = reverse;
 	}
 }
 
