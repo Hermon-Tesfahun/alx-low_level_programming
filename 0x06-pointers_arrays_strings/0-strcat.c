@@ -6,18 +6,25 @@
  *
  * Return: pointer to the resulting string dest
  */
-char *_strcat(char *dest, const char *src) {
-    char *ptr = dest;
+char *_strcat(char *dest, char *src)
+{
+	int i;
+	int j;
 
-    while (*ptr != '\0') {
-        ptr++;
-    }
-    while (*src != '\0') {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
-    *ptr = '\0';
-    
-    return dest;
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+
+	dest[i] = '\0';
+	return (dest);
 }
+
