@@ -1,18 +1,44 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * main - multiplies two numbers
- * @a: number of arguments
- * @b: array of arguments
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
  *
- * Return: the product of a and b
+ * Return: the int converted from the string
  */
-
-int multiply_numbers(int a, int b)
+int _atoi(char *s)
+{
+	int i, d, n, len, f, digit;
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+	while (s[len] != '\0')
+		len++;
+	while (i < len && f == 0)
 	{
-		return a * b;
+		if (s[i] == '-')
+			++d;
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
 	}
+	if (f == 0)
+		return (0);
+	return (n);
+}
 
 /**
  * main - multiplies two numbers
@@ -21,31 +47,20 @@ int multiply_numbers(int a, int b)
  *
  * Return: 0 (Success), 1 (Error)
  */
-
-int main(int argc, char *argv[]) {
-       if (argc != 3)
+int main(int argc, char *argv[])
+{
+	int result, num1, num2;
+	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
-		return 1;
+		return (1);
 	}
 
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
 
-	if (num1 == 0 && argv[1][0] != '0')
-	{
-		printf("Error: Invalid input for the first number\n");
-		return 1;
-	}
-
-	if (num2 == 0 && argv[2][0] != '0')
-	{
-		printf("Error: Invalid input for the second number\n");
-		return 1;
-	}
-
-	int result = multiply_numbers(num1, num2);
 	printf("%d\n", result);
-
-	return 0;
+	return (0);
 }
+
